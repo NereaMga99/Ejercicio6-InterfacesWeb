@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="description" content="Mina de Historias es tu tienda de libros de segunda mano y tu biblioteca online personal. Encuentra libros usados, ediciones económicas y lecturas para todos los gustos.">
+    <meta name="keywords" content="Biblioteca, Biblioteca online, libros, libreria, tienda online, tienda de segunda mano, Mina, Mina de Historias, libros de fantasia, 
+    libros de romance, libros de accion, libros de terror.">
+    <meta name="robots" content="index, follow">
+            <link rel="stylesheet" href="tailwind-local.css">
+            <link rel="stylesheet" href="style.css">
+
+    <title>Mina de Historias - Biblioteca online y tienda de libros de segunda mano.</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <!-- Preload de las fuentes principales -->
+    <link rel="preload" as="font" type="font/woff2" href="fonts/playfair-display-latin-400-normal.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="fonts/bellefair-latin-400-normal.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="fonts/belleza-latin-400-normal.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="fonts/playfair-display-latin-400-italic.woff2" crossorigin>
+    <link rel="stylesheet" href="fonts/fonts.css">
+</head>
+
+<body>
+    <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+
+    <header>
+        <div class="logo-title">
+            <a href="index.html" class="logo" aria-label="Mina de Historias - Inicio">
+                <svg class="logo-svg" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" role="img">
+                    <title>Logo de Mina de Historias</title>
+
+                    <g class="anim-carga">
+                        <text x="250" y="150" font-family="'Playfair Display', serif" font-weight="400" font-size="110" class="texto-tema" text-anchor="middle">Mina</text>
+                        <text x="250" y="210" font-family="'Playfair Display', serif" font-weight="400" font-size="45" class="texto-tema" text-anchor="middle">de</text>
+                        <text x="250" y="310" font-family="'Playfair Display', serif" font-weight="400" font-size="110" class="texto-tema" text-anchor="middle">Historias</text>
+                    </g>
+
+                    <g class="anim-hover" transform="translate(200, 350)">
+                        <path class="libro-tema" d="M10 10 L 90 10 L 90 80 L 50 95 L 10 80 Z M 50 10 L 50 95"/>
+                        <path class="libro-tema" d="M20 25 L40 25 M20 35 L40 35 M20 45 L40 45 M20 55 L40 55"/>
+                        <path class="libro-tema" d="M60 25 L80 25 M60 35 L80 35 M60 45 L80 45 M60 55 L80 55"/>
+                    </g>
+
+                    <g class="decoracion">
+                        <circle class="estrella-tema" cx="100" cy="100" r="4" />
+                        <circle class="estrella-tema" cx="400" cy="120" r="5" />
+                        <circle class="estrella-tema" cx="80" cy="350" r="6" />
+                        <circle class="estrella-tema" cx="420" cy="380" r="4" />
+                        <circle class="estrella-tema" cx="150" cy="450" r="5" />
+                        <circle class="estrella-tema" cx="350" cy="450" r="6" />
+                        
+                        <polygon class="estrella-tema" points="50,50 55,65 70,65 58,75 63,90 50,80 37,90 42,75 30,65 45,65" transform="translate(80, 40) scale(0.5)"/>
+                        <polygon class="estrella-tema" points="50,50 55,65 70,65 58,75 63,90 50,80 37,90 42,75 30,65 45,65" transform="translate(230, 20) scale(0.4)"/>
+                        <polygon class="estrella-tema" points="50,50 55,65 70,65 58,75 63,90 50,80 37,90 42,75 30,65 45,65" transform="translate(380, 50) scale(0.6)"/>
+                        <polygon class="estrella-tema" points="50,50 55,65 70,65 58,75 63,90 50,80 37,90 42,75 30,65 45,65" transform="translate(50, 380) scale(0.5)"/>
+                        <polygon class="estrella-tema" points="50,50 55,65 70,65 58,75 63,90 50,80 37,90 42,75 30,65 45,65" transform="translate(350, 360) scale(0.6)"/>
+                        <polygon class="estrella-tema" points="50,50 55,65 70,65 58,75 63,90 50,80 37,90 42,75 30,65 45,65" transform="translate(220, 430) scale(0.4)"/>
+                    </g>
+                </svg>
+            </a>
+        </div>
+
+        <nav class="nav-menu" aria-label="Menú principal" id="nav-menu" aria-hidden="true">
+            <ul>
+                <li><a href="index.html" class="relative after:content-[''] after:block after:w-0 after:h-[2px] after:bg-green-600 after:transition-all after:duration-300 hover:after:w-full">Inicio</a></li>
+                <li><a href="biblioteca.html" class="relative after:content-[''] after:block after:w-0 after:h-[2px] after:bg-green-600 after:transition-all after:duration-300 hover:after:w-full">Biblioteca</a></li>
+                <li><a href="tienda.html" class="relative after:content-[''] after:block after:w-0 after:h-[2px] after:bg-green-600 after:transition-all after:duration-300 hover:after:w-full">Tienda</a></li>
+                <li><a href="registro.html" class="relative after:content-[''] after:block after:w-0 after:h-[2px] after:bg-green-600 after:transition-all after:duration-300 hover:after:w-full">Registro</a></li>
+                <li><a href="login.html" class="relative after:content-[''] after:block after:w-0 after:h-[2px] after:bg-green-600 after:transition-all after:duration-300 hover:after:w-full">Login</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-right">
+            <div class="header-actions">
+                <a href="perfil.html" class="icono" aria-label="Perfil" title="Perfil">
+                    <img src="imagenes/iconos/iconoUsuarioFondoClaro.png" alt="Perfil" class="icon-header">
+                </a>
+                <a href="carrito.html" class="icono icono-carrito-wrapper" aria-label="Abrir carrito de compra">
+                    <img src="imagenes/iconos/carritoTonoClaro.png" alt="" class="icon-header">
+                    <span class="carrito-badge" id="carrito-badge" aria-live="polite"></span>
+                </a>
+
+                <div class="dropdown">
+                    <a href="#" class="icono dropbtn" aria-label="Cambiar idioma" aria-haspopup="true" aria-expanded="false" aria-controls="menu-idioma">
+                        <img src="imagenes/iconos/globoTerraqueoClaro.png" alt="" class="icon-header">
+                    </a>
+                    <ul class="dropdown-content" aria-hidden="true" id="menu-idioma">
+                        <li><a href="?lang=es"><img src="imagenes/idiomas/espania.png" alt="" class="flag"> Español</a></li>
+                        <li><a href="?lang=en"><img src="imagenes/idiomas/inglaterra.jpg" alt="" class="flag"> English</a></li>
+                    </ul>
+                </div>
+                <button id="toggle-theme" aria-label="Cambiar entre modo claro y oscuro" aria-pressed="false">🌙</button>
+            </div>
+            <button class="hamburger" aria-label="Abrir menú" aria-controls="nav-menu" aria-expanded="false">&#9776;</button>
+        </div>
+    </header>
+
+<main id="contenido-principal" class="perfil-main" tabindex="-1">
+        <h1 class="perfil-titulo-pagina">PERFIL</h1>
+
+        <div class="perfil-card">
+            
+            <div class="perfil-header-card">
+                <div class="columna-avatar">
+                    <div class="avatar-marco">
+                        <img src="imagenes/perfil/avatar.png" alt="Foto de perfil">
+                    </div>
+                    <button class="btn-gris" id="btn-cambiar-foto">Cambiar foto</button>
+                </div>
+
+                <div class="columna-info">
+                    <h2 class="seccion-titulo">Información de Usuario</h2>
+                    <ul class="lista-datos">
+                        <li><strong>Nombre de usuario:</strong> Nerea99</li>
+                        <li><strong>Correo electrónico:</strong> nereamga99@gmail.com</li>
+                        <li><strong>Miembro desde:</strong> Marzo 2025</li>
+                        <li><strong>Género favorito:</strong> Fantasía.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="linea-separadora">
+
+            <div class="perfil-seccion">
+                <h2 class="seccion-titulo">Mi Biblioteca</h2>
+                <ul class="lista-datos">
+                    <li><strong>Libros leídos:</strong> 25</li>
+                    <li><strong>Últimos libros añadidos:</strong>
+                        <ul class="sub-lista">
+                            <li>El Señor de los anillos III.</li>
+                            <li>Una Corte de Rosas y Espinas.</li>
+                            <li>Donde los Árboles Cantan.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <hr class="linea-separadora">
+
+            <div class="perfil-seccion">
+                <h2 class="seccion-titulo">Libros en Venta</h2>
+                <ul class="lista-datos">
+                    <li><strong>Libros disponibles:</strong> 3</li>
+                    <li><strong>Última venta:</strong> Cazadores de Sombras 1.</li>
+                </ul>
+            </div>
+
+            <hr class="linea-separadora">
+
+            <div class="perfil-seccion2">
+                <h2 class="seccion-titulo">Actividad Lectora (Últimos 6 meses)</h2>
+                <div class="contenedor-grafica">
+                    <canvas id="graficoPerfil"></canvas>
+                </div>
+            </div>
+
+            <div class="perfil-acciones">
+                <button class="btn-accion" id="btn-editar-perfil">
+                    <i class="fa-solid fa-gear"></i> Editar Perfil
+                </button>
+                <button class="btn-accion" id="btn-cambiar-pass">
+                    <i class="fa-solid fa-pen"></i> Cambiar contraseña
+                </button>
+                <button class="btn-accion btn-cerrar" id="btn-cerrar-sesion">
+                    <i class="fa-regular fa-user"></i> Cerrar sesión
+                </button>
+            </div>
+        </div>
+    </main>
+
+<footer>
+    <ul class="footer-menu">
+        <li>© 2025, <a href="index.html">Mina de Historias</a></li>
+        <li><a href="politicaPrivacidad.html">Política de privacidad</a></li>
+        <li><a href="avisoLegal.html">Aviso legal</a></li>
+        <li><a href="cookies.html">Politica de Cookies</a></li>
+        <li><a href="contacto.html">Contacto</a></li> 
+    </ul>
+</footer>
+
+<div class="social-icons">
+    <a href="" target="_blank" aria-label="Instagram">
+        <img src="imagenes/iconos/instagram.svg" alt="Instagram" />
+    </a>
+
+    <a href="" target="_blank" aria-label="WhatsApp">
+        <img src="imagenes/iconos/whatsapp.svg" alt="WhatsApp" />
+    </a>
+</div>
+
+<button id="btn-subir" aria-label="Volver arriba" title="Volver arriba">
+    ↑
+</button>
+
+<script src="script.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1 
+        });
+
+        const hiddenElements = document.querySelectorAll('.reveal');
+        hiddenElements.forEach((el) => observer.observe(el));
+        console.log("Sistema de animación iniciado. Elementos vigilados:", hiddenElements.length);
+    });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+</html>

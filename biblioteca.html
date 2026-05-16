@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="description" content="Consulta y organiza los libros de tu biblioteca online personal en Mina de Historias. Ordena tus lecturas por temáticas.">
+    <meta name="keywords" content="Biblioteca, Biblioteca online, libros, libreria, Mina, Mina de Historias, libros de fantasia, romance, accion, terror, juveniles, autoayuda, misterio, clásicos.">
+    <meta name="robots" content="index, follow">
+            <link rel="stylesheet" href="tailwind-local.css">
+            <link rel="stylesheet" href="style.css">
+
+    <title>Biblioteca - Mina de Historias | Biblioteca online</title>
+    <link rel="icon" href="favicon.png" type="image/png"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Preload de las fuentes principales -->
+    <link rel="preload" as="font" type="font/woff2" href="fonts/playfair-display-latin-400-normal.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="fonts/bellefair-latin-400-normal.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="fonts/belleza-latin-400-normal.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="fonts/playfair-display-latin-400-italic.woff2" crossorigin>
+
+
+    <link rel="stylesheet" href="fonts/fonts.css">
+</head>
+
+<body>
+    <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+
+    <header>
+        <div class="logo-title">
+            <a href="index.html" class="logo" aria-label="Mina de Historias - Inicio">
+                <svg class="logo-svg" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" role="img">
+                    <title>Logo de Mina de Historias</title>
+
+                    <g class="anim-carga">
+                        <text x="250" y="150" font-family="'Playfair Display', serif" font-weight="400" font-size="110" class="texto-tema" text-anchor="middle">Mina</text>
+                        <text x="250" y="210" font-family="'Playfair Display', serif" font-weight="400" font-size="45" class="texto-tema" text-anchor="middle">de</text>
+                        <text x="250" y="310" font-family="'Playfair Display', serif" font-weight="400" font-size="110" class="texto-tema" text-anchor="middle">Historias</text>
+                    </g>
+
+                    <g class="anim-hover" transform="translate(200, 350)">
+                        <path class="libro-tema" d="M10 10 L 90 10 L 90 80 L 50 95 L 10 80 Z M 50 10 L 50 95"/>
+                        <path class="libro-tema" d="M20 25 L40 25 M20 35 L40 35 M20 45 L40 45 M20 55 L40 55"/>
+                        <path class="libro-tema" d="M60 25 L80 25 M60 35 L80 35 M60 45 L80 45 M60 55 L80 55"/>
+                    </g>
+
+                    <g class="decoracion">
+                        <circle class="estrella-tema" cx="100" cy="100" r="4" />
+                        <circle class="estrella-tema" cx="400" cy="120" r="5" />
+                        <circle class="estrella-tema" cx="80" cy="350" r="6" />
+                        <circle class="estrella-tema" cx="420" cy="380" r="4" />
+                        <circle class="estrella-tema" cx="150" cy="450" r="5" />
+                        <circle class="estrella-tema" cx="350" cy="450" r="6" />
+                        
+                        <polygon class="estrella-tema" points="50,50 55,65 70,65 58,75 63,90 50,80 37,90 42,75 30,65 45,65" transform="translate(80, 40) scale(0.5)"/>
+                        <polygon class="estrella-tema" points="50,50 55,65 70,65 58,75 63,90 50,80 37,90 42,75 30,65 45,65" transform="translate(230, 20) scale(0.4)"/>
+                        <polygon class="estrella-tema" points="50,50 55,65 70,65 58,75 63,90 50,80 37,90 42,75 30,65 45,65" transform="translate(380, 50) scale(0.6)"/>
+                        <polygon class="estrella-tema" points="50,50 55,65 70,65 58,75 63,90 50,80 37,90 42,75 30,65 45,65" transform="translate(50, 380) scale(0.5)"/>
+                        <polygon class="estrella-tema" points="50,50 55,65 70,65 58,75 63,90 50,80 37,90 42,75 30,65 45,65" transform="translate(350, 360) scale(0.6)"/>
+                        <polygon class="estrella-tema" points="50,50 55,65 70,65 58,75 63,90 50,80 37,90 42,75 30,65 45,65" transform="translate(220, 430) scale(0.4)"/>
+                    </g>
+                </svg>
+            </a>
+        </div>
+
+        <nav class="nav-menu" aria-label="Menú principal" id="nav-menu" aria-hidden="true">
+            <ul>
+                <li><a href="index.html" class="relative after:content-[''] after:block after:w-0 after:h-[2px] after:bg-green-600 after:transition-all after:duration-300 hover:after:w-full">Inicio</a></li>
+                <li><a href="biblioteca.html" class="relative after:content-[''] after:block after:w-0 after:h-[2px] after:bg-green-600 after:transition-all after:duration-300 hover:after:w-full">Biblioteca</a></li>
+                <li><a href="tienda.html" class="relative after:content-[''] after:block after:w-0 after:h-[2px] after:bg-green-600 after:transition-all after:duration-300 hover:after:w-full">Tienda</a></li>
+                <li><a href="registro.html" class="relative after:content-[''] after:block after:w-0 after:h-[2px] after:bg-green-600 after:transition-all after:duration-300 hover:after:w-full">Registro</a></li>
+                <li><a href="login.html" class="relative after:content-[''] after:block after:w-0 after:h-[2px] after:bg-green-600 after:transition-all after:duration-300 hover:after:w-full">Login</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-right">
+            <div class="header-actions">
+                <a href="perfil.html" class="icono" aria-label="Perfil" title="Perfil">
+                    <img src="imagenes/iconos/iconoUsuarioFondoClaro.png" alt="Perfil" class="icon-header">
+                </a>
+                <a href="carrito.html" class="icono icono-carrito-wrapper" aria-label="Abrir carrito de compra">
+                    <img src="imagenes/iconos/carritoTonoClaro.png" alt="" class="icon-header">
+                    <span class="carrito-badge" id="carrito-badge" aria-live="polite"></span>
+                </a>
+
+                <div class="dropdown">
+                    <a href="#" class="icono dropbtn" aria-label="Cambiar idioma" aria-haspopup="true" aria-expanded="false" aria-controls="menu-idioma">
+                        <img src="imagenes/iconos/globoTerraqueoClaro.png" alt="" class="icon-header">
+                    </a>
+                    <ul class="dropdown-content" aria-hidden="true" id="menu-idioma">
+                        <li><a href="?lang=es"><img src="imagenes/idiomas/espania.png" alt="" class="flag"> Español</a></li>
+                        <li><a href="?lang=en"><img src="imagenes/idiomas/inglaterra.jpg" alt="" class="flag"> English</a></li>
+                    </ul>
+                </div>
+                <button id="toggle-theme" aria-label="Cambiar entre modo claro y oscuro" aria-pressed="false">🌙</button>
+            </div>
+            <button class="hamburger" aria-label="Abrir menú" aria-controls="nav-menu" aria-expanded="false">&#9776;</button>
+        </div>
+    </header>
+
+<section class="layout">
+    <aside id="menu-tematicas" class="reveal" aria-label="Filtrar por temática">
+        <h2>TEMÁTICA</h2>
+        <ul>
+            <li><a href="#">- Acción</a></li>
+            <li><a href="#">- Ciencia Ficción</a></li>
+            <li><a href="#">- Aventura</a></li>
+            <li><a href="#">- Romance</a></li>
+            <li><a href="#">- Terror</a></li>
+            <li><a href="#">- Misterio</a></li>
+            <li><a href="#">- Fantasía</a></li>
+            <li><a href="#">- Autoayuda</a></li>
+            <li><a href="#">- Juvenil</a></li>
+            <li><a href="#">- Poesía</a></li>
+            <li><a href="#">- Clásicos</a></li>
+        </ul>
+    </aside>
+
+    <main id="contenido-principal" class="bibliotecaYtienda" tabindex="-1">
+        <h1>BIBLIOTECA</h1> 
+
+        <h2 class="categoria">Fantasía</h2>
+
+        <form class="search-bar reveal" role="search" aria-label="Buscar libros">
+            <div class="search-input">
+                <input type="text" placeholder="Busca tu libro" aria-label="Busca tu libro" />
+                <span class="icon-lupa">🔍</span>
+            </div>
+        <button class="btn-add hover:animate-jelly" type="button"><img src="imagenes/iconos/iconoAniadirClaro.png" class="btn-icon" alt="">Añadir Libro</button>
+
+        <button class="btn-delete hover:animate-jelly" type="button"><img src="imagenes/iconos/iconoEliminarClaro.png" class="btn-icon" alt="">Borrar Libro</button>
+        </form>
+
+        <div class="libros-grid">
+            <article class="libro-card reveal">
+                <a href="imagenes/productos/fotosGrandes/elSeniorDeLosAnillos_800x1200.png" target="_blank">
+                    <picture><source type="image/webp" srcset="imagenes/productos/fotosPequeñas/elSeniorDeLosAnillos_200x300.webp 480w,
+                        imagenes/productos/fotosMedianas/elSeniorDeLosAnillos_400x600.webp 800w" sizes="(max-width: 768px) 100vw, 200px"><img src="imagenes/productos/fotosMedianas/elSeniorDeLosAnillos_400x600.png" srcset="imagenes/productos/fotosPequeñas/elSeniorDeLosAnillos_200x300.png 480w,
+                        imagenes/productos/fotosMedianas/elSeniorDeLosAnillos_400x600.png 800w"
+                        sizes="(max-width: 768px) 100vw, 200px"
+                        loading="lazy"
+                        alt="Libro de fantasía en tu biblioteca online: El Señor de los Anillos"
+                    /></picture>
+                </a>
+
+                <a href="fichaDelLibro.html">
+                <h3>EL SEÑOR DE LOS ANILLOS. LA COMUNIDAD DEL ANILLO.</h3>
+                </a>
+                <p>El libro me ha parecido super épico. Me ha enganchado de principio a fin.</p>
+                <div class="stars">★★★★★</div>
+                <time>25-09-2025</time>
+            </article>
+
+            <article class="libro-card reveal">
+                <a href="imagenes/productos/fotosGrandes/losMisteriosDeJembur_800x1200.png" target="_blank">
+                    <picture><source type="image/webp" srcset="imagenes/productos/fotosPequeñas/losMisteriosDeJembur_200x300.webp 480w,
+                            imagenes/productos/fotosMedianas/losMisteriosDeJembur_400x600.webp 800w" sizes="(max-width: 768px) 100vw, 200px"><img src="imagenes/productos/fotosMedianas/losMisteriosDeJembur_400x600.png" srcset="imagenes/productos/fotosPequeñas/losMisteriosDeJembur_200x300.png 480w,
+                            imagenes/productos/fotosMedianas/losMisteriosDeJembur_400x600.png 800w"
+                        sizes="(max-width: 768px) 100vw, 200px"
+                        loading="lazy"
+                        alt="Los misterios de Jembur II"
+                    /></picture>
+                </a>
+
+                <h3>LOS MISTERIOS DE JEMBUR II</h3>
+                <p>El libro me ha parecido super épico. Me ha enganchado de principio a fin.</p>
+                <div class="stars">★★★☆☆</div>
+                <time>19-08-2025</time>
+            </article>
+
+            <article class="libro-card reveal">
+                <a href="imagenes/productos/fotosGrandes/juegoDeTronos_800x1200.png" target="_blank">
+                    <picture><source type="image/webp" srcset="imagenes/productos/fotosPequeñas/juegoDeTronos_200x300.webp 480w,
+                            imagenes/productos/fotosMedianas/juegoDeTronos_400x600.webp 800w" sizes="(max-width: 768px) 100vw, 200px"><img src="imagenes/productos/fotosMedianas/juegoDeTronos_400x600.png" srcset="imagenes/productos/fotosPequeñas/juegoDeTronos_200x300.png 480w,
+                            imagenes/productos/fotosMedianas/juegoDeTronos_400x600.png 800w"
+                        sizes="(max-width: 768px) 100vw, 200px"
+                        loading="lazy"
+                        alt="Juego de Tronos"
+                    /></picture>
+                </a>
+
+                <h3>JUEGO DE TRONOS</h3>
+                <p>El libro me ha parecido super épico. Me ha enganchado de principio a fin.</p>
+                <div class="stars">★★★★☆</div>
+                <time>05-06-2025</time>
+            </article>
+
+            <article class="libro-card reveal">
+                <a href="imagenes/productos/fotosGrandes/vinculosDeSangre_800x1200.png" target="_blank">
+                    <picture><source type="image/webp" srcset="imagenes/productos/fotosPequeñas/vinculosDeSangre_200x300.webp 480w,
+                            imagenes/productos/fotosMedianas/vinculosDeSangre_400x600.webp 800w" sizes="(max-width: 768px) 100vw, 200px"><img src="imagenes/productos/fotosMedianas/vinculosDeSangre_400x600.png" srcset="imagenes/productos/fotosPequeñas/vinculosDeSangre_200x300.png 480w,
+                            imagenes/productos/fotosMedianas/vinculosDeSangre_400x600.png 800w"
+                        sizes="(max-width: 768px) 100vw, 200px"
+                        loading="lazy"
+                        alt="Vínculos de sangre"
+                    /></picture>
+                </a>
+
+                <h3>VÍNCULOS DE SANGRE</h3>
+                <p>El libro me ha parecido super épico. Me ha enganchado de principio a fin.</p>
+                <div class="stars">★★★★★</div>
+                <time>09-03-2025</time>
+            </article>
+
+            <article class="libro-card reveal">
+                <a href="imagenes/productos/fotosGrandes/elFiloDelAgua_800x1200.png" target="_blank">
+                    <picture><source type="image/webp" srcset="imagenes/productos/fotosPequeñas/elFiloDelAgua_200x300.webp 480w,
+                            imagenes/productos/fotosMedianas/elFiloDelAgua_400x600.webp 800w" sizes="(max-width: 768px) 100vw, 200px"><img src="imagenes/productos/fotosMedianas/elFiloDelAgua_400x600.png" srcset="imagenes/productos/fotosPequeñas/elFiloDelAgua_200x300.png 480w,
+                            imagenes/productos/fotosMedianas/elFiloDelAgua_400x600.png 800w"
+                        sizes="(max-width: 768px) 100vw, 200px"
+                        loading="lazy"
+                        alt="El filo del agua"
+                    /></picture>
+                </a>
+
+                <h3>EL FILO DEL AGUA</h3>
+                <p>El libro me ha parecido super épico. Me ha enganchado de principio a fin.</p>
+                <div class="stars">★★★☆☆</div>
+                <time>08-02-2025</time>
+            </article>
+
+            <article class="libro-card reveal">
+                <a href="imagenes/productos/fotosGrandes/elDonDelAlma_800x1200.png" target="_blank">
+                    <picture><source type="image/webp" srcset="imagenes/productos/fotosPequeñas/elDonDelAlma_200x300.webp 480w,
+                            imagenes/productos/fotosMedianas/elDonDelAlma_400x600.webp 800w" sizes="(max-width: 768px) 100vw, 200px"><img src="imagenes/productos/fotosMedianas/elDonDelAlma_400x600.png" srcset="imagenes/productos/fotosPequeñas/elDonDelAlma_200x300.png 480w,
+                            imagenes/productos/fotosMedianas/elDonDelAlma_400x600.png 800w"
+                        sizes="(max-width: 768px) 100vw, 200px"
+                        loading="lazy"
+                        alt="El don de alma"
+                    /></picture>
+                </a>
+
+                <h3>EL DON DE ALMA</h3>
+                <p>El libro me ha parecido super épico. Me ha enganchado de principio a fin.</p>
+                <div class="stars">★★★★☆</div>
+                <time>15-01-2025</time>
+            </article>
+        </div>
+    </main>
+</section>
+
+<footer>
+    <ul class="footer-menu">
+        <li>© 2025, <a href="index.html">Mina de Historias</a></li>
+        <li><a href="politicaPrivacidad.html">Política de privacidad</a></li>
+        <li><a href="avisoLegal.html">Aviso legal</a></li>
+        <li><a href="cookies.html">Politica de Cookies</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+</footer>
+
+<div class="social-icons">
+    <a href="" target="_blank" aria-label="Instagram">
+        <img src="imagenes/iconos/instagram.svg" alt="Instagram" />
+    </a>
+
+    <a href="" target="_blank" aria-label="WhatsApp">
+        <img src="imagenes/iconos/whatsapp.svg" alt="WhatsApp" />
+    </a>
+</div>
+
+<button id="btn-subir" aria-label="Volver arriba" title="Volver arriba">
+    ↑
+</button>
+
+<script src="script.js"></script>
+
+</body>
+</html>

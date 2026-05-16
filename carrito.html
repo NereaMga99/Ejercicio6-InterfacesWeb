@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Carrito de compra de Mina de Historias.">
+    <meta name="robots" content="noindex, nofollow">
+        <title>Carrito - Mina de Historias</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+            <link rel="stylesheet" href="tailwind-local.css">
+            <link rel="stylesheet" href="style.css">
+    <!-- Preload de las fuentes principales -->
+    <link rel="preload" as="font" type="font/woff2" href="fonts/playfair-display-latin-400-normal.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="fonts/bellefair-latin-400-normal.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="fonts/belleza-latin-400-normal.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="fonts/playfair-display-latin-400-italic.woff2" crossorigin>
+
+    <link rel="stylesheet" href="fonts/fonts.css">
+</head>
+<body>
+    <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+
+    <header>
+        <div class="logo-title">
+            <a href="index.html" class="logo" aria-label="Mina de Historias - Inicio">
+                <svg class="logo-svg" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" role="img">
+                    <title>Logo de Mina de Historias</title>
+                    <g class="anim-carga" font-family="'Playfair Display', serif" text-anchor="middle">
+                        <text x="250" y="150" font-size="110" class="texto-tema">Mina</text>
+                        <text x="250" y="210" font-size="45"  class="texto-tema">de</text>
+                        <text x="250" y="310" font-size="110" class="texto-tema">Historias</text>
+                    </g>
+                    <g class="anim-hover libro-tema" transform="translate(200, 350)" fill="none" stroke="currentColor">
+                        <path d="M10 10 L90 10 L90 80 L50 95 L10 80 Z M50 10 L50 95"/>
+                        <path d="M20 25 L40 25 M20 35 L40 35 M20 45 L40 45 M20 55 L40 55"/>
+                        <path d="M60 25 L80 25 M60 35 L80 35 M60 45 L80 45 M60 55 L80 55"/>
+                    </g>
+                </svg>
+            </a>
+        </div>
+
+        <nav class="nav-menu" aria-label="Menú principal" id="nav-menu" aria-hidden="true">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="biblioteca.html">Biblioteca</a></li>
+                <li><a href="tienda.html">Tienda</a></li>
+                <li><a href="registro.html">Registro</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-right">
+            <div class="header-actions">
+                <a href="perfil.html" class="icono" aria-label="Perfil" title="Perfil">
+                    <img src="imagenes/iconos/iconoUsuarioFondoClaro.png" alt="Perfil" class="icon-header">
+                </a>
+                <a href="carrito.html" class="icono icono-carrito-wrapper" aria-label="Abrir carrito de compra">
+                    <img src="imagenes/iconos/carritoTonoClaro.png" alt="" class="icon-header">
+                    <span class="carrito-badge" id="carrito-badge" aria-live="polite"></span>
+                </a>
+                <div class="dropdown">
+                    <a href="#" class="icono dropbtn" aria-label="Cambiar idioma" aria-haspopup="true" aria-expanded="false" aria-controls="menu-idioma">
+                        <img src="imagenes/iconos/globoTerraqueoClaro.png" alt="" class="icon-header">
+                    </a>
+                    <ul class="dropdown-content" aria-hidden="true" id="menu-idioma">
+                        <li><a href="?lang=es"><img src="imagenes/idiomas/espania.png" alt="" class="flag"> Español</a></li>
+                        <li><a href="?lang=en"><img src="imagenes/idiomas/inglaterra.jpg" alt="" class="flag"> English</a></li>
+                    </ul>
+                </div>
+                <button id="toggle-theme" aria-label="Cambiar entre modo claro y oscuro" aria-pressed="false">🌙</button>
+            </div>
+            <button class="hamburger" aria-label="Abrir menú" aria-controls="nav-menu" aria-expanded="false">&#9776;</button>
+        </div>
+    </header>
+
+    <main id="contenido-principal" class="carrito-main" tabindex="-1">
+        <h1 class="carrito-titulo">🛒 MI CARRITO</h1>
+        <div class="carrito-layout">
+            <section class="carrito-productos" aria-label="Productos en el carrito">
+                <div id="carrito-lista-items"></div>
+                <div id="carrito-vacio" class="carrito-vacio" hidden>
+                    <p>📚 Tu carrito está vacío.</p>
+                    <a href="tienda.html" class="btn-ir-tienda">Ir a la tienda</a>
+                </div>
+            </section>
+            <aside class="carrito-resumen" aria-label="Resumen del pedido">
+                <h2>Resumen del pedido</h2>
+                <ul class="resumen-lineas" id="resumen-lineas"></ul>
+                <hr>
+                <div class="resumen-total">
+                    <span>Total</span>
+                    <strong id="resumen-total-precio">0.00€</strong>
+                </div>
+                <button class="btn-finalizar" id="btn-finalizar" disabled>Finalizar compra</button>
+                <a href="tienda.html" class="carrito-seguir-comprando">← Seguir comprando</a>
+            </aside>
+        </div>
+    </main>
+
+    <!-- MODAL ELIMINAR -->
+    <div id="modal-eliminar" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-titulo" hidden>
+        <div class="modal-caja">
+            <h2 id="modal-titulo">¿Eliminar producto?</h2>
+            <p id="modal-mensaje">¿Seguro que quieres eliminar este libro del carrito?</p>
+            <div class="modal-botones">
+                <button id="modal-btn-cancelar" class="btn-modal-cancelar">Cancelar</button>
+                <button id="modal-btn-confirmar" class="btn-modal-confirmar">Sí, eliminar</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <ul class="footer-menu">
+            <li>© 2025, <a href="index.html">Mina de Historias</a></li>
+            <li><a href="politicaPrivacidad.html">Política de privacidad</a></li>
+            <li><a href="avisoLegal.html">Aviso legal</a></li>
+            <li><a href="cookies.html">Politica de Cookies</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </footer>
+
+    <div class="social-icons">
+        <a href="" target="_blank" aria-label="Instagram"><img src="imagenes/iconos/instagram.svg" alt="Instagram"></a>
+        <a href="" target="_blank" aria-label="WhatsApp"><img src="imagenes/iconos/whatsapp.svg" alt="WhatsApp"></a>
+    </div>
+    <button id="btn-subir" aria-label="Volver arriba" title="Volver arriba">↑</button>
+
+    <script src="script.js"></script>
+    <script>
+    (() => {
+        const $ = id => document.getElementById(id);
+        const lista   = $('carrito-lista-items');
+        const vacio   = $('carrito-vacio');
+        const resumen = $('resumen-lineas');
+        const totalEl = $('resumen-total-precio');
+        const btnFin  = $('btn-finalizar');
+        const modal   = $('modal-eliminar');
+        const modalMsg = $('modal-mensaje');
+        const btnOk   = $('modal-btn-confirmar');
+        const btnNo   = $('modal-btn-cancelar');
+        let idEliminar = null;
+
+        const corta = (t, n = 28) => t.length > n ? t.slice(0, n) + '…' : t;
+        const toggleModal = abrir => {
+            modal.hidden = !abrir;
+            document.body.style.overflow = abrir ? 'hidden' : '';
+        };
+
+        function render() {
+            const items = Carrito.obtener();
+            vacio.hidden = items.length > 0;
+            btnFin.disabled = !items.length;
+
+            let total = 0;
+            lista.innerHTML = items.map(it => {
+                const sub = (+it.precio * it.cantidad).toFixed(2);
+                total += +sub;
+                return `
+                    <div class="carrito-fila">
+                        <img src="${it.img}" alt="${it.nombre}" class="carrito-fila-img">
+                        <div class="carrito-fila-info">
+                            <p class="carrito-fila-nombre">${it.nombre}</p>
+                            <p class="carrito-fila-precio-unit">${(+it.precio).toFixed(2)}€ / unidad</p>
+                        </div>
+                        <div class="carrito-fila-controles">
+                            <button class="ctrl-cantidad" data-id="${it.id}" data-d="-1" aria-label="Reducir cantidad">−</button>
+                            <span class="ctrl-num">${it.cantidad}</span>
+                            <button class="ctrl-cantidad" data-id="${it.id}" data-d="1" aria-label="Aumentar cantidad">+</button>
+                        </div>
+                        <p class="carrito-fila-subtotal">${sub}€</p>
+                        <button class="carrito-fila-borrar" data-id="${it.id}" data-nombre="${it.nombre}" aria-label="Eliminar ${it.nombre}">🗑</button>
+                    </div>`;
+            }).join('');
+
+            resumen.innerHTML = items.map(it => {
+                const sub = (+it.precio * it.cantidad).toFixed(2);
+                return `<li><span>${corta(it.nombre)} ×${it.cantidad}</span><span>${sub}€</span></li>`;
+            }).join('');
+
+            totalEl.textContent = total.toFixed(2) + '€';
+        }
+
+        // Delegación de eventos en la lista
+        lista.addEventListener('click', e => {
+            const btn = e.target.closest('button');
+            if (!btn) return;
+            const { id, d, nombre } = btn.dataset;
+
+            if (btn.classList.contains('ctrl-cantidad')) {
+                Carrito.cambiarCantidad(id, +d);
+                render();
+            } else if (btn.classList.contains('carrito-fila-borrar')) {
+                const item = Carrito.obtener().find(i => String(i.id) === String(id));
+                const cantidad = item ? Number(item.cantidad) : 0;
+
+                if (cantidad > 1) {
+                    // Más de una unidad: resta 1 sin pedir confirmación
+                    Carrito.cambiarCantidad(id, -1);
+                    render();
+                } else {
+                    // Última unidad: confirmar eliminación del producto
+                    idEliminar = id;
+                    modalMsg.textContent = `¿Seguro que quieres eliminar "${nombre}" del carrito?`;
+                    toggleModal(true);
+                    btnOk.focus();
+                }
+            }
+        });
+
+        // Modal
+        btnOk.addEventListener('click', () => {
+            if (idEliminar) Carrito.eliminar(idEliminar);
+            idEliminar = null;
+            toggleModal(false);
+            render();
+        });
+        btnNo.addEventListener('click', () => toggleModal(false));
+        modal.addEventListener('click', e => { if (e.target === modal) toggleModal(false); });
+        document.addEventListener('keydown', e => { if (e.key === 'Escape' && !modal.hidden) toggleModal(false); });
+
+        // Finalizar compra
+        btnFin.addEventListener('click', () => {
+            alert('🎉 ¡Pedido realizado con éxito! Gracias por tu compra.');
+            Carrito.vaciar();
+            render();
+        });
+
+        render();
+    })();
+    </script>
+</body>
+</html>

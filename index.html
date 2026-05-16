@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="description" content="Mina de Historias es tu tienda de libros de segunda mano y tu biblioteca online personal. Encuentra libros usados, ediciones económicas y lecturas para todos los gustos.">
+    <meta name="keywords" content="Biblioteca, Biblioteca online, libros, libreria, tienda online, tienda de segunda mano, Mina, Mina de Historias, libros de fantasia, 
+    libros de romance, libros de accion, libros de terror.">
+    <meta name="robots" content="index, follow">
+            <link rel="stylesheet" href="tailwind-local.css">
+            <link rel="stylesheet" href="style.css">
+
+    <title>Mina de Historias - Biblioteca online y tienda de libros de segunda mano.</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <!-- Preload de las fuentes principales -->
+    <link rel="preload" as="font" type="font/woff2" href="fonts/playfair-display-latin-400-normal.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="fonts/bellefair-latin-400-normal.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="fonts/belleza-latin-400-normal.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="fonts/playfair-display-latin-400-italic.woff2" crossorigin>
+
+    <link rel="stylesheet" href="fonts/fonts.css">
+
+    <link rel="preload" as="image" href="imagenes/hero/hero-modificado.webp" type="image/webp" fetchpriority="high">
+</head>
+
+<body>
+    <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+    <header>
+        <div class="logo-title">
+            <a href="index.html" class="logo" aria-label="Mina de Historias - Inicio">
+                <svg class="logo-svg" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" role="img">
+                    <title>Logo de Mina de Historias</title>
+
+                    <g class="anim-carga">
+                        <text x="250" y="150" font-family="'Playfair Display', serif" font-weight="400" font-size="110" class="texto-tema" text-anchor="middle">Mina</text>
+                        <text x="250" y="210" font-family="'Playfair Display', serif" font-weight="400" font-size="45" class="texto-tema" text-anchor="middle">de</text>
+                        <text x="250" y="310" font-family="'Playfair Display', serif" font-weight="400" font-size="110" class="texto-tema" text-anchor="middle">Historias</text>
+                    </g>
+
+                    <g class="anim-hover" transform="translate(200, 350)">
+                        <path class="libro-tema" d="M10 10 L 90 10 L 90 80 L 50 95 L 10 80 Z M 50 10 L 50 95"/>
+                        <path class="libro-tema" d="M20 25 L40 25 M20 35 L40 35 M20 45 L40 45 M20 55 L40 55"/>
+                        <path class="libro-tema" d="M60 25 L80 25 M60 35 L80 35 M60 45 L80 45 M60 55 L80 55"/>
+                    </g>
+
+                    <g class="decoracion">
+                        <circle class="estrella-tema" cx="100" cy="100" r="4" />
+                        <circle class="estrella-tema" cx="400" cy="120" r="5" />
+                        <circle class="estrella-tema" cx="80" cy="350" r="6" />
+                        <circle class="estrella-tema" cx="420" cy="380" r="4" />
+                        <circle class="estrella-tema" cx="150" cy="450" r="5" />
+                        <circle class="estrella-tema" cx="350" cy="450" r="6" />
+                        
+                        <polygon class="estrella-tema" points="50,50 55,65 70,65 58,75 63,90 50,80 37,90 42,75 30,65 45,65" transform="translate(80, 40) scale(0.5)"/>
+                        <polygon class="estrella-tema" points="50,50 55,65 70,65 58,75 63,90 50,80 37,90 42,75 30,65 45,65" transform="translate(230, 20) scale(0.4)"/>
+                        <polygon class="estrella-tema" points="50,50 55,65 70,65 58,75 63,90 50,80 37,90 42,75 30,65 45,65" transform="translate(380, 50) scale(0.6)"/>
+                        <polygon class="estrella-tema" points="50,50 55,65 70,65 58,75 63,90 50,80 37,90 42,75 30,65 45,65" transform="translate(50, 380) scale(0.5)"/>
+                        <polygon class="estrella-tema" points="50,50 55,65 70,65 58,75 63,90 50,80 37,90 42,75 30,65 45,65" transform="translate(350, 360) scale(0.6)"/>
+                        <polygon class="estrella-tema" points="50,50 55,65 70,65 58,75 63,90 50,80 37,90 42,75 30,65 45,65" transform="translate(220, 430) scale(0.4)"/>
+                    </g>
+                </svg>
+            </a>
+        </div>
+
+        <nav class="nav-menu" aria-label="Menú principal" id="nav-menu" aria-hidden="true">
+            <ul>
+                <li><a href="index.html" class="relative after:content-[''] after:block after:w-0 after:h-[2px] after:bg-green-600 after:transition-all after:duration-300 hover:after:w-full">Inicio</a></li>
+                <li><a href="biblioteca.html" class="relative after:content-[''] after:block after:w-0 after:h-[2px] after:bg-green-600 after:transition-all after:duration-300 hover:after:w-full">Biblioteca</a></li>
+                <li><a href="tienda.html" class="relative after:content-[''] after:block after:w-0 after:h-[2px] after:bg-green-600 after:transition-all after:duration-300 hover:after:w-full">Tienda</a></li>
+                <li><a href="registro.html" class="relative after:content-[''] after:block after:w-0 after:h-[2px] after:bg-green-600 after:transition-all after:duration-300 hover:after:w-full">Registro</a></li>
+                <li><a href="login.html" class="relative after:content-[''] after:block after:w-0 after:h-[2px] after:bg-green-600 after:transition-all after:duration-300 hover:after:w-full">Login</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-right">
+            <div class="header-actions">
+                <a href="perfil.html" class="icono" aria-label="Perfil" title="Perfil">
+                    <img src="imagenes/iconos/iconoUsuarioFondoClaro.png" alt="Perfil" class="icon-header">
+                </a>
+                <a href="carrito.html" class="icono icono-carrito-wrapper" aria-label="Abrir carrito de compra">
+                    <img src="imagenes/iconos/carritoTonoClaro.png" alt="" class="icon-header">
+                    <span class="carrito-badge" id="carrito-badge" aria-live="polite"></span>
+                </a>
+
+                <div class="dropdown">
+                    <a href="#" class="icono dropbtn" aria-label="Cambiar idioma" aria-haspopup="true" aria-expanded="false" aria-controls="menu-idioma">
+                        <img src="imagenes/iconos/globoTerraqueoClaro.png" alt="" class="icon-header">
+                    </a>
+                    <ul class="dropdown-content" aria-hidden="true" id="menu-idioma">
+                        <li><a href="?lang=es"><img src="imagenes/idiomas/espania.png" alt="" class="flag"> Español</a></li>
+                        <li><a href="?lang=en"><img src="imagenes/idiomas/inglaterra.jpg" alt="" class="flag"> English</a></li>
+                    </ul>
+                </div>
+                <button id="toggle-theme" aria-label="Cambiar entre modo claro y oscuro" aria-pressed="false">🌙</button>
+            </div>
+            <button class="hamburger" aria-label="Abrir menú" aria-controls="nav-menu" aria-expanded="false">&#9776;</button>
+        </div>
+    </header>
+
+<main id="contenido-principal" tabindex="-1">
+    <h1 class="sr-only">Biblioteca online. Tienda de libros de segunda mano y libros usados</h1>
+
+    <section class="cabecera">
+        <picture><source type="image/webp" srcset="imagenes/hero/hero-modificado.webp"><img src="imagenes/hero/hero-modificado.png" alt="Estantería de libros antiguos" fetchpriority="high" decoding="async"></picture>
+
+        <div class="overlay">
+            <div class="hero-content">
+                <h2>Un libro es un sueño que puedes sostener en tus manos</h2>
+                <a href="perfil.html" class="hover:animate-jelly">
+                    Empieza tu Historia
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="banner-novedades">
+        <iframe src="imagenes/hero/banner_novedades/banner_novedades.html" title="Novedades en la tienda" loading="lazy" aria-label="Banner animado de novedades en la tienda"></iframe>
+    </section>
+
+    <div class="separador-magico"></div>
+
+    <section class="caja-libros-tematicas">
+        <h2>Últimos libros leidos</h2>
+        <div id="carrusel-libros" class="carrusel-libros-wrapper" role="region" aria-label="Carrusel de libros leídos">
+        <button class="carrusel-flecha carrusel-flecha-prev" id="carrusel-prev" aria-label="Libros anteriores">&#8249;</button>
+        <div class="carrusel-ventana-libros">
+            <div class="libros-container reveal" id="carrusel-pista-libros">
+            <article class="box1 animate-fadeIn">
+                <a href="imagenes/productos/fotosGrandes/elSeniorDeLosAnillos_800x1200.png" target="_blank">
+                    <picture><source type="image/webp" srcset="imagenes/productos/fotosPequeñas/elSeniorDeLosAnillos_200x300.webp 480w,
+                        imagenes/productos/fotosMedianas/elSeniorDeLosAnillos_400x600.webp 800w" sizes="(max-width: 768px) 100vw, 250px"><img src="imagenes/productos/fotosMedianas/elSeniorDeLosAnillos_400x600.png" srcset="imagenes/productos/fotosPequeñas/elSeniorDeLosAnillos_200x300.png 480w,
+                        imagenes/productos/fotosMedianas/elSeniorDeLosAnillos_400x600.png 800w"
+                        sizes="(max-width: 768px) 100vw, 250px"
+                        loading="lazy"
+                        alt="El Señor de los Anillos, el libro se encuentra en tu biblioteca personal"
+                    /></picture>
+                </a>
+
+                <div class="text">
+                <a href="fichaDelLibro.html">
+                    <h3>EL SEÑOR DE LOS ANILLOS. LA COMUNIDAD DEL ANILLO.</h3>
+                </a>
+
+                    <div class="rating">
+                        <input type="radio" id="star5-1" name="rating1" value="5" aria-label="5 estrellas" tabindex="-1">
+                        <input type="radio" id="star4-1" name="rating1" value="4" aria-label="4 estrellas" tabindex="-1">
+                        <input type="radio" id="star3-1" name="rating1" value="3" aria-label="3 estrellas" tabindex="-1">
+                        <input type="radio" id="star2-1" name="rating1" value="2" aria-label="2 estrellas" tabindex="-1">
+                        <input type="radio" id="star1-1" name="rating1" value="1" aria-label="1 estrella" tabindex="-1">
+                    </div>
+
+                    <time>25-09-2025</time>
+                </div> 
+            </article>
+
+            <article class="box2 animate-fadeIn">
+                <a href="imagenes/productos/fotosGrandes/unaCorteDeRosasYEspinas_800x1200.png" target="_blank">
+                    <picture><source type="image/webp" srcset="imagenes/productos/fotosPequeñas/unaCorteDeRosasYEspinas_200x300.webp 480w,
+                        imagenes/productos/fotosMedianas/unaCorteDeRosasYEspinas_400x600.webp 800w" sizes="(max-width: 768px) 100vw, 250px"><img src="imagenes/productos/fotosMedianas/unaCorteDeRosasYEspinas_400x600.png" srcset="imagenes/productos/fotosPequeñas/unaCorteDeRosasYEspinas_200x300.png 480w,
+                        imagenes/productos/fotosMedianas/unaCorteDeRosasYEspinas_400x600.png 800w"
+                        sizes="(max-width: 768px) 100vw, 250px"
+                        loading="lazy"
+                        alt="Una Corte de Rosas y Espinas"
+                    /></picture>
+                </a>
+
+                <div class="text">
+                    <h3>UNA CORTE DE ROSAS Y ESPINAS 1.</h3>
+
+                    <div class="rating">
+                        <input type="radio" id="star5-2" name="rating2" value="5" aria-label="5 estrellas" tabindex="-1">
+                        <input type="radio" id="star4-2" name="rating2" value="4" aria-label="4 estrellas" tabindex="-1">
+                        <input type="radio" id="star3-2" name="rating2" value="3" aria-label="3 estrellas" tabindex="-1">
+                        <input type="radio" id="star2-2" name="rating2" value="2" aria-label="2 estrellas" tabindex="-1">
+                        <input type="radio" id="star1-2" name="rating2" value="1" aria-label="1 estrella" tabindex="-1">
+                    </div>
+
+                    <time>30-07-2025</time>
+                </div> 
+            </article>
+
+            <article class="box3 animate-fadeIn">
+                <a href="imagenes/productos/fotosGrandes/juegoDeTronos_800x1200.png" target="_blank">
+                    <picture><source type="image/webp" srcset="imagenes/productos/fotosPequeñas/juegoDeTronos_200x300.webp 480w,
+                            imagenes/productos/fotosMedianas/juegoDeTronos_400x600.webp 800w" sizes="(max-width: 768px) 100vw, 250px"><img src="imagenes/productos/fotosMedianas/juegoDeTronos_400x600.png" srcset="imagenes/productos/fotosPequeñas/juegoDeTronos_200x300.png 480w,
+                            imagenes/productos/fotosMedianas/juegoDeTronos_400x600.png 800w"
+                        sizes="(max-width: 768px) 100vw, 250px"
+                        loading="lazy"
+                        alt="Juego de Tronos 1"
+                    /></picture>
+                </a>
+
+                <div class="text">
+                    <h3>JUEGO DE TRONOS (CANCIÓN DE HIELO Y FUEGO 1).</h3>
+
+                    <div class="rating">
+                        <input type="radio" id="star5-3" name="rating3" value="5" aria-label="5 estrellas" tabindex="-1">
+                        <input type="radio" id="star4-3" name="rating3" value="4" aria-label="4 estrellas" tabindex="-1">
+                        <input type="radio" id="star3-3" name="rating3" value="3" aria-label="3 estrellas" tabindex="-1">
+                        <input type="radio" id="star2-3" name="rating3" value="2" aria-label="2 estrellas" tabindex="-1">
+                        <input type="radio" id="star1-3" name="rating3" value="1" aria-label="1 estrella" tabindex="-1">
+                    </div>
+
+                    <time>05-06-2025</time>
+                </div> 
+            </article>
+
+            <article class="box4 animate-fadeIn">
+                <a href="imagenes/productos/fotosGrandes/dondeLosArbolesCantan_800x1200.png" target="_blank">
+                    <picture><source type="image/webp" srcset="imagenes/productos/fotosPequeñas/dondeLosArbolesCantan_200x300.webp 480w,
+                            imagenes/productos/fotosMedianas/dondeLosArbolesCantan_400x600.webp 800w" sizes="(max-width: 768px) 100vw, 250px"><img 
+                        src="imagenes/productos/fotosMedianas/dondeLosArbolesCantan_400x600.png" srcset="imagenes/productos/fotosPequeñas/dondeLosArbolesCantan_200x300.png 480w,
+                            imagenes/productos/fotosMedianas/dondeLosArbolesCantan_400x600.png 800w"
+                        sizes="(max-width: 768px) 100vw, 250px"
+                        loading="lazy"
+                        alt="Donde los árboles cantan"
+                    /></picture>
+                </a>
+
+                <div class="text">
+                    <h3>DONDE LOS ÁRBOLES CANTAN.</h3>
+
+                    <div class="rating">
+                        <input type="radio" id="star5-4" name="rating4" value="5" aria-label="5 estrellas" tabindex="-1">
+                        <input type="radio" id="star4-4" name="rating4" value="4" aria-label="4 estrellas" tabindex="-1">
+                        <input type="radio" id="star3-4" name="rating4" value="3" aria-label="3 estrellas" tabindex="-1">
+                        <input type="radio" id="star2-4" name="rating4" value="2" aria-label="2 estrellas" tabindex="-1">
+                        <input type="radio" id="star1-4" name="rating4" value="1" aria-label="1 estrella" tabindex="-1">
+                    </div>
+
+                    <time>10-05-2025</time>
+                </div> 
+            </article>
+
+            </div><!-- fin carrusel-pista-libros -->
+        </div><!-- fin carrusel-ventana-libros -->
+        <button class="carrusel-flecha carrusel-flecha-next" id="carrusel-next" aria-label="Libros siguientes">&#8250;</button>
+        </div><!-- fin carrusel-libros -->
+                <div class="carrusel-dots-libros" id="carrusel-dots-libros"></div>
+                <div class="enlace-biblioteca">
+                    <a href="biblioteca.html" class="enlace-biblioteca-link">
+                        Tu biblioteca te espera… añade más libros a tu universo literario
+                    </a>
+                </div>
+    </section>
+
+    <section class="cita-autor">
+        <blockquote class="cita">
+            <p>"Un lector vive mil vidas antes de morir. Aquel que nunca lee solo vive una."</p>
+            <cite>— George R.R. Martin</cite>
+        </blockquote>
+    </section>
+
+    <section class="caja-libros-tematicas">
+        <h2>Explora por temáticas</h2>
+
+        <!-- PESTAÑAS -->
+        <div class="pestanas-nav" role="tablist" aria-label="Géneros literarios">
+            <button class="pestana-btn pestana-activa" role="tab" aria-selected="true"  id="tab-btn-todos"    aria-controls="tab-todos">Todos</button>
+            <button class="pestana-btn"               role="tab" aria-selected="false" id="tab-btn-fantasia" aria-controls="tab-fantasia">📚 Fantasía</button>
+            <button class="pestana-btn"               role="tab" aria-selected="false" id="tab-btn-romance"  aria-controls="tab-romance">💖 Romance</button>
+            <button class="pestana-btn"               role="tab" aria-selected="false" id="tab-btn-terror"   aria-controls="tab-terror">👻 Terror</button>
+            <button class="pestana-btn"               role="tab" aria-selected="false" id="tab-btn-accion"   aria-controls="tab-accion">⚔️ Acción</button>
+        </div>
+
+        <!-- PANEL: TODOS -->
+        <div class="tematicas-container reveal" id="tab-todos" role="tabpanel" aria-labelledby="tab-btn-todos">
+            <div class="fantasia">
+                <a href="#" tabindex="-1" aria-hidden="true">
+                    <picture><source type="image/webp" srcset="imagenes/categorias/fantasia.webp"><img src="imagenes/categorias/fantasia.png" alt="Temática Fantasía"/></picture>
+                </a>
+                <h3>FANTASÍA</h3>
+            </div>
+            <div class="romance">
+                <a href="#" tabindex="-1" aria-hidden="true">
+                    <picture><source type="image/webp" srcset="imagenes/categorias/romance.webp"><img src="imagenes/categorias/romance.png" alt="Temática Romance"/></picture>
+                </a>
+                <h3>ROMANCE</h3>
+            </div>
+            <div class="tematica">
+                <a href="#" tabindex="-1" aria-hidden="true">
+                    <picture><source type="image/webp" srcset="imagenes/categorias/terror.webp"><img src="imagenes/categorias/terror.png" alt="Temática Terror"/></picture>
+                </a>
+                <h3>TERROR</h3>
+            </div>
+            <div class="tematica">
+                <a href="#" tabindex="-1" aria-hidden="true">
+                    <picture><source type="image/webp" srcset="imagenes/categorias/accion.webp"><img src="imagenes/categorias/accion.png" alt="Temática Acción"/></picture>
+                </a>
+                <h3>ACCIÓN</h3>
+            </div>
+        </div>
+
+        <!-- PANEL: FANTASÍA -->
+        <div class="libros-tab-panel" id="tab-fantasia" role="tabpanel" aria-labelledby="tab-btn-fantasia" hidden>
+            <div class="libros-grid-tab">
+                <article class="libro-card">
+                    <a href="imagenes/productos/fotosGrandes/elSeniorDeLosAnillos_800x1200.png" target="_blank">
+                        <picture><source type="image/webp" srcset="imagenes/productos/fotosPequeñas/elSeniorDeLosAnillos_200x300.webp 480w,
+                                    imagenes/productos/fotosMedianas/elSeniorDeLosAnillos_400x600.webp 800w" sizes="(max-width: 768px) 100vw, 200px"><img src="imagenes/productos/fotosMedianas/elSeniorDeLosAnillos_400x600.png"
+                            srcset="imagenes/productos/fotosPequeñas/elSeniorDeLosAnillos_200x300.png 480w,
+                                    imagenes/productos/fotosMedianas/elSeniorDeLosAnillos_400x600.png 800w"
+                            sizes="(max-width: 768px) 100vw, 200px"
+                            loading="lazy"
+                            alt="El Señor de los Anillos - La Comunidad del Anillo"/></picture>
+                    </a>
+                    <a href="fichaDelLibro.html"><h3>EL SEÑOR DE LOS ANILLOS. LA COMUNIDAD DEL ANILLO.</h3></a>
+                    <div class="stars">★★★★★</div>
+                    <time>25-09-2025</time>
+                </article>
+
+                <article class="libro-card">
+                    <a href="imagenes/productos/fotosGrandes/juegoDeTronos_800x1200.png" target="_blank">
+                        <picture><source type="image/webp" srcset="imagenes/productos/fotosPequeñas/juegoDeTronos_200x300.webp 480w,
+                                    imagenes/productos/fotosMedianas/juegoDeTronos_400x600.webp 800w" sizes="(max-width: 768px) 100vw, 200px"><img src="imagenes/productos/fotosMedianas/juegoDeTronos_400x600.png"
+                            srcset="imagenes/productos/fotosPequeñas/juegoDeTronos_200x300.png 480w,
+                                    imagenes/productos/fotosMedianas/juegoDeTronos_400x600.png 800w"
+                            sizes="(max-width: 768px) 100vw, 200px"
+                            loading="lazy"
+                            alt="Juego de Tronos"/></picture>
+                    </a>
+                    <h3>JUEGO DE TRONOS (CANCIÓN DE HIELO Y FUEGO 1).</h3>
+                    <div class="stars">★★★★☆</div>
+                    <time>05-06-2025</time>
+                </article>
+
+                <article class="libro-card">
+                    <a href="imagenes/productos/fotosGrandes/dondeLosArbolesCantan_800x1200.png" target="_blank">
+                        <picture><source type="image/webp" srcset="imagenes/productos/fotosPequeñas/dondeLosArbolesCantan_200x300.webp 480w,
+                                    imagenes/productos/fotosMedianas/dondeLosArbolesCantan_400x600.webp 800w" sizes="(max-width: 768px) 100vw, 200px"><img src="imagenes/productos/fotosMedianas/dondeLosArbolesCantan_400x600.png"
+                            srcset="imagenes/productos/fotosPequeñas/dondeLosArbolesCantan_200x300.png 480w,
+                                    imagenes/productos/fotosMedianas/dondeLosArbolesCantan_400x600.png 800w"
+                            sizes="(max-width: 768px) 100vw, 200px"
+                            loading="lazy"
+                            alt="Donde los Árboles Cantan"/></picture>
+                    </a>
+                    <h3>DONDE LOS ÁRBOLES CANTAN.</h3>
+                    <div class="stars">★★★★★</div>
+                    <time>10-05-2025</time>
+                </article>
+            </div>
+            <div class="enlace-biblioteca">
+                <a href="biblioteca.html" class="enlace-biblioteca-link">Ver todos los libros de Fantasía →</a>
+            </div>
+        </div>
+
+        <!-- PANEL: ROMANCE -->
+        <div class="libros-tab-panel" id="tab-romance" role="tabpanel" aria-labelledby="tab-btn-romance" hidden>
+            <div class="libros-grid-tab">
+                <article class="libro-card">
+                    <a href="imagenes/productos/fotosGrandes/unaCorteDeRosasYEspinas_800x1200.png" target="_blank">
+                        <picture><source type="image/webp" srcset="imagenes/productos/fotosPequeñas/unaCorteDeRosasYEspinas_200x300.webp 480w,
+                                    imagenes/productos/fotosMedianas/unaCorteDeRosasYEspinas_400x600.webp 800w" sizes="(max-width: 768px) 100vw, 200px"><img src="imagenes/productos/fotosMedianas/unaCorteDeRosasYEspinas_400x600.png"
+                            srcset="imagenes/productos/fotosPequeñas/unaCorteDeRosasYEspinas_200x300.png 480w,
+                                    imagenes/productos/fotosMedianas/unaCorteDeRosasYEspinas_400x600.png 800w"
+                            sizes="(max-width: 768px) 100vw, 200px"
+                            loading="lazy"
+                            alt="Una Corte de Rosas y Espinas"/></picture>
+                    </a>
+                    <h3>UNA CORTE DE ROSAS Y ESPINAS 1.</h3>
+                    <div class="stars">★★★★★</div>
+                    <time>30-07-2025</time>
+                </article>
+
+                <article class="libro-card">
+                    <a href="imagenes/productos/fotosGrandes/elDonDelAlma_800x1200.png" target="_blank">
+                        <picture><source type="image/webp" srcset="imagenes/productos/fotosPequeñas/elDonDelAlma_200x300.webp 480w,
+                                    imagenes/productos/fotosMedianas/elDonDelAlma_400x600.webp 800w" sizes="(max-width: 768px) 100vw, 200px"><img src="imagenes/productos/fotosMedianas/elDonDelAlma_400x600.png"
+                            srcset="imagenes/productos/fotosPequeñas/elDonDelAlma_200x300.png 480w,
+                                    imagenes/productos/fotosMedianas/elDonDelAlma_400x600.png 800w"
+                            sizes="(max-width: 768px) 100vw, 200px"
+                            loading="lazy"
+                            alt="El Don de Alma"/></picture>
+                    </a>
+                    <h3>EL DON DE ALMA.</h3>
+                    <div class="stars">★★★★☆</div>
+                    <time>15-01-2025</time>
+                </article>
+            </div>
+            <div class="enlace-biblioteca">
+                <a href="biblioteca.html" class="enlace-biblioteca-link">Ver todos los libros de Romance →</a>
+            </div>
+        </div>
+
+        <!-- PANEL: TERROR -->
+        <div class="libros-tab-panel" id="tab-terror" role="tabpanel" aria-labelledby="tab-btn-terror" hidden>
+            <div class="libros-grid-tab">
+                <article class="libro-card">
+                    <a href="imagenes/productos/fotosGrandes/losMisteriosDeJembur_800x1200.png" target="_blank">
+                        <picture><source type="image/webp" srcset="imagenes/productos/fotosPequeñas/losMisteriosDeJembur_200x300.webp 480w,
+                                    imagenes/productos/fotosMedianas/losMisteriosDeJembur_400x600.webp 800w" sizes="(max-width: 768px) 100vw, 200px"><img src="imagenes/productos/fotosMedianas/losMisteriosDeJembur_400x600.png"
+                            srcset="imagenes/productos/fotosPequeñas/losMisteriosDeJembur_200x300.png 480w,
+                                    imagenes/productos/fotosMedianas/losMisteriosDeJembur_400x600.png 800w"
+                            sizes="(max-width: 768px) 100vw, 200px"
+                            loading="lazy"
+                            alt="Los Misterios de Jembur II"/></picture>
+                    </a>
+                    <h3>LOS MISTERIOS DE JEMBUR II.</h3>
+                    <div class="stars">★★★☆☆</div>
+                    <time>19-08-2025</time>
+                </article>
+
+                <article class="libro-card">
+                    <a href="imagenes/productos/fotosGrandes/vinculosDeSangre_800x1200.png" target="_blank">
+                        <picture><source type="image/webp" srcset="imagenes/productos/fotosPequeñas/vinculosDeSangre_200x300.webp 480w,
+                                    imagenes/productos/fotosMedianas/vinculosDeSangre_400x600.webp 800w" sizes="(max-width: 768px) 100vw, 200px"><img src="imagenes/productos/fotosMedianas/vinculosDeSangre_400x600.png"
+                            srcset="imagenes/productos/fotosPequeñas/vinculosDeSangre_200x300.png 480w,
+                                    imagenes/productos/fotosMedianas/vinculosDeSangre_400x600.png 800w"
+                            sizes="(max-width: 768px) 100vw, 200px"
+                            loading="lazy"
+                            alt="Vínculos de Sangre"/></picture>
+                    </a>
+                    <h3>VÍNCULOS DE SANGRE.</h3>
+                    <div class="stars">★★★★★</div>
+                    <time>09-03-2025</time>
+                </article>
+            </div>
+            <div class="enlace-biblioteca">
+                <a href="biblioteca.html" class="enlace-biblioteca-link">Ver todos los libros de Terror →</a>
+            </div>
+        </div>
+
+        <!-- PANEL: ACCIÓN -->
+        <div class="libros-tab-panel" id="tab-accion" role="tabpanel" aria-labelledby="tab-btn-accion" hidden>
+            <div class="libros-grid-tab">
+                <article class="libro-card">
+                    <a href="imagenes/productos/fotosGrandes/elFiloDelAgua_800x1200.png" target="_blank">
+                        <picture><source type="image/webp" srcset="imagenes/productos/fotosPequeñas/elFiloDelAgua_200x300.webp 480w,
+                                    imagenes/productos/fotosMedianas/elFiloDelAgua_400x600.webp 800w" sizes="(max-width: 768px) 100vw, 200px"><img src="imagenes/productos/fotosMedianas/elFiloDelAgua_400x600.png"
+                            srcset="imagenes/productos/fotosPequeñas/elFiloDelAgua_200x300.png 480w,
+                                    imagenes/productos/fotosMedianas/elFiloDelAgua_400x600.png 800w"
+                            sizes="(max-width: 768px) 100vw, 200px"
+                            loading="lazy"
+                            alt="El Filo del Agua"/></picture>
+                    </a>
+                    <h3>EL FILO DEL AGUA.</h3>
+                    <div class="stars">★★★☆☆</div>
+                    <time>08-02-2025</time>
+                </article>
+            </div>
+            <div class="enlace-biblioteca">
+                <a href="biblioteca.html" class="enlace-biblioteca-link">Ver todos los libros de Acción →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ACORDEÓN -->
+    <section class="caja-libros-tematicas" id="seccion-faq">
+        <h2>Preguntas Frecuentes</h2>
+        <div class="acordeon-faq" id="acordeon-faq">
+
+            <div class="acordeon-item">
+                <button class="acordeon-cabecera" aria-expanded="false" aria-controls="faq-1">
+                    <span>¿Cómo añado un libro a mi biblioteca?</span>
+                    <span class="acordeon-icono" aria-hidden="true">+</span>
+                </button>
+                <div class="acordeon-cuerpo" id="faq-1" hidden>
+                    <p>Regístrate o inicia sesión, busca el título en la tienda o en el buscador de la biblioteca y pulsa <strong>"Añadir a mi biblioteca"</strong>. El libro quedará guardado con fecha y valoración.</p>
+                </div>
+            </div>
+
+            <div class="acordeon-item">
+                <button class="acordeon-cabecera" aria-expanded="false" aria-controls="faq-2">
+                    <span>¿Puedo vender mis libros usados?</span>
+                    <span class="acordeon-icono" aria-hidden="true">+</span>
+                </button>
+                <div class="acordeon-cuerpo" id="faq-2" hidden>
+                    <p>Sí. Desde tu perfil ve a <strong>"Libros en Venta"</strong> y pulsa <em>"Publicar libro"</em>. Podrás subir fotos, fijar precio y describir el estado del ejemplar.</p>
+                </div>
+            </div>
+
+            <div class="acordeon-item">
+                <button class="acordeon-cabecera" aria-expanded="false" aria-controls="faq-3">
+                    <span>¿Es gratuita la biblioteca online?</span>
+                    <span class="acordeon-icono" aria-hidden="true">+</span>
+                </button>
+                <div class="acordeon-cuerpo" id="faq-3" hidden>
+                    <p>¡Completamente gratis! Crear cuenta y gestionar tu biblioteca no tiene ningún coste. Solo pagas si compras un libro en la tienda.</p>
+                </div>
+            </div>
+
+            <div class="acordeon-item">
+                <button class="acordeon-cabecera" aria-expanded="false" aria-controls="faq-4">
+                    <span>¿Cómo funciona el sistema de valoraciones?</span>
+                    <span class="acordeon-icono" aria-hidden="true">+</span>
+                </button>
+                <div class="acordeon-cuerpo" id="faq-4" hidden>
+                    <p>Puedes puntuar cada libro del 1 al 5 estrellas desde la ficha del libro o tu biblioteca. Las valoraciones son privadas y solo tú las ves.</p>
+                </div>
+            </div>
+
+            <div class="acordeon-item">
+                <button class="acordeon-cabecera" aria-expanded="false" aria-controls="faq-5">
+                    <span>¿Puedo cambiar el idioma de la web?</span>
+                    <span class="acordeon-icono" aria-hidden="true">+</span>
+                </button>
+                <div class="acordeon-cuerpo" id="faq-5" hidden>
+                    <p>Sí. En la cabecera encontrarás el icono del globo 🌐. Haz clic y elige entre <strong>Español</strong> e <strong>English</strong>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <ul class="footer-menu">
+        <li>© 2025, <a href="index.html">Mina de Historias</a></li>
+        <li><a href="politicaPrivacidad.html">Política de privacidad</a></li>
+        <li><a href="avisoLegal.html">Aviso legal</a></li>
+        <li><a href="cookies.html">Politica de Cookies</a></li>
+        <li><a href="contacto.html">Contacto</a></li> 
+    </ul>
+</footer>
+
+<div class="social-icons">
+    <a href="" target="_blank" aria-label="Instagram">
+        <img src="imagenes/iconos/instagram.svg" alt="Instagram" />
+    </a>
+
+    <a href="" target="_blank" aria-label="WhatsApp">
+        <img src="imagenes/iconos/whatsapp.svg" alt="WhatsApp" />
+    </a>
+</div>
+
+<button id="btn-subir" aria-label="Volver arriba" title="Volver arriba">
+    ↑
+</button>
+
+<script src="script.js"></script>
+
+</body>
+</html>

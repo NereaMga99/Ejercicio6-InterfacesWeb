@@ -881,6 +881,12 @@ section .overlay {
 :root.theme-dark .tematicas-container h3 { color: #f5f5f5; }
 :root.theme-dark .pestana-btn.pestana-activa { color: #1c1c1c; }
 
+:root.theme-dark .perfil-titulo-pagina,
+:root.theme-dark .seccion-titulo,
+:root.theme-dark .panel-carrito-header h2 {
+    color: var(--color-primary); 
+}
+
 /* Cita autor */
 .cita-autor {
     border: 2px solid var(--color-border);

@@ -28,11 +28,11 @@ Este proyecto no solo se enfoca en la experiencia del usuario, sino también en 
 - Proyecto: Tarea 6 de Diseño de Interfaces Web.
 
 ## Captura de Accesibilidad y SEO
-<img width="1943" height="1361" alt="Screenshot 2026-05-16 201832" src="https://github.com/user-attachments/assets/c49ce708-176f-439c-b11e-aa28c2cdff1d" />
+<img width="2556" height="1378" alt="Screenshot 2026-05-17 194221" src="https://github.com/user-attachments/assets/08d6ea59-687c-4f4f-88ca-12fe7109d765" />
 
 ## Vídeo de Funcionamiento
 He grabado un vídeo demostrativo navegando por la Biblioteca, la Tienda y el Perfil en Google Chrome y Microsoft Edge, mostrando el diseño responsivo y las gráficas interactivas.
-
+[▶️ **HAZ CLIC AQUÍ PARA VER LA DEMOSTRACIÓN DE LA WEB EN YOUTUBE**](https://www.youtube.com/watch?v=a3Wz0mNT9Y0)
 
 ## Enlaces
 - Repositorio en GitHub: https://github.com/NereaMga99/Ejercicio6-InterfacesWeb

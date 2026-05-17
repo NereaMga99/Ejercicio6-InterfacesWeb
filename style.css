@@ -107,7 +107,9 @@ header nav,
 header .header-right {
     display: flex;
     align-items: center;
-    gap: 2rem; 
+    /* gap fluido: 0.4rem mínimo, escala con el viewport (2vw), máx 2rem.
+       En móvil queda ~6 px, en escritorio ~32 px → la hamburguesa nunca se desborda. */
+    gap: clamp(0.4rem, 2vw, 2rem);
 }
 
 .nav-menu {
@@ -2354,7 +2356,7 @@ footer p {
         background: transparent;
         border: none;
         cursor: pointer;
-        padding: 0;
+        padding: 0; 
         line-height: 1;
     }
 
@@ -2586,7 +2588,7 @@ footer p {
         box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         cursor: pointer;
         position: relative;  
-        z-index: 50; /* Esto eleva el menú por encima de la barra de búsqueda */
+        z-index: 50; 
     }
 
     #menu-tematicas h2 {
@@ -2905,44 +2907,14 @@ footer p {
         width: 80%;
     }
 
-    /* CARRITO DE LA COMPRA */
-        #panel-carrito {
-        top: 50%;
-        left: 50%;
-        right: auto;
-        transform: translate(-50%, -50%) scale(0.9);
-        width: 92vw;
-        max-width: 400px;
-        opacity: 0;
-        pointer-events: none;
-    }
-    #panel-carrito.panel-abierto {
-        right: auto;
-        transform: translate(-50%, -50%) scale(1);
-        opacity: 1;
-        pointer-events: auto;
-    }
-    .panel-carrito-lista { max-height: 45vh; }
-
-    .carrito-layout { 
-        grid-template-columns: 1fr; 
-    }
-    .carrito-resumen {
-        position: static;
-        max-height: none;
-    }
-    .carrito-fila { grid-template-columns: 60px 1fr; grid-template-rows: auto auto auto; }
-    .carrito-fila-subtotal { text-align: left; }
-    .carrito-fila-borrar { justify-self: end; }
-
     /* FOOTER */
-        footer {
+    footer {
         background-color: var(--color-footer);
         border-top: 0.1rem solid var(--color-border);
         color: var(--color-text);
         text-align: center;
-        padding: 0.5rem 0;   
-        margin-top: 0;       
+        padding: 0.5rem 0;
+        margin-top: 0;
     }
 
     .footer-menu {
@@ -2951,8 +2923,8 @@ footer p {
         justify-content: center;
         gap: 0.5rem;
         padding-bottom: 2rem;
-        margin: 0;          
-        padding: 0; 
+        margin: 0;
+        padding: 0;
     }
 
     .footer-menu li {
@@ -2964,22 +2936,151 @@ footer p {
     }
 
     .footer-menu li:before {
-        content: "✦";
+        content: "\2726";
         position: absolute;
         left: 0;
         color: #1e40af;
     }
 
-    /* Redes sociales en móvil */
+    /* Redes sociales en movil: encima del boton subir para no solaparse */
     .social-icons {
-            bottom: 70px; 
-            right: 15px;
-            gap: 8px;
+        bottom: 95px;
+        right: 15px;
+        gap: 8px;
     }
 
     .social-icons a img {
         width: 32px;
         height: 32px;
         padding: 4px;
+    }
+
+    #btn-subir {
+        bottom: 40px;
+        right: 15px;
+        width: 36px;
+        height: 36px;
+        font-size: 1.2rem;
+    }
+
+    /* CARRITO (pagina /carrito.html) centrado en movil */
+    .carrito-main {
+        margin: 1.5rem auto;
+        padding: 0 1rem 2rem;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .carrito-titulo {
+        text-align: center;
+    }
+
+    .carrito-layout {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        justify-items: center;
+    }
+
+    .carrito-productos,
+    .carrito-resumen {
+        width: 100%;
+        max-width: 420px;
+        margin: 0 auto;
+    }
+
+    /* PANEL LATERAL del carrito centrado en movil */
+    #panel-carrito {
+        width: 95vw;
+        max-width: 420px;
+        right: -100vw; /* fuera de pantalla por la derecha */
+    }
+    #panel-carrito.panel-abierto {
+        right: 50%;
+        transform: translateX(50%);
+    }
+}
+
+/* ============================================================
+   BREAKPOINT EXTRA: Pantallas medianas (tablets 769-1024 px)
+   El @media principal es max-width: 768px, asi que entre 769
+   y 1024 px se aplica el diseno de escritorio. Como hay muchos
+   elementos en el header, en este rango tambien activamos el
+   menu hamburguesa para que no se apelmace.
+   ============================================================ */
+@media (max-width: 1024px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        background-color: var(--color-white);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        border-top: 1px solid var(--color-border);
+        z-index: 1000;
+    }
+    .nav-menu.active {
+        display: flex;
+    }
+    .nav-menu ul {
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+    .nav-menu ul li {
+        text-align: center;
+        padding: 0.8rem 0;
+        border-bottom: 1px solid var(--color-surface);
+    }
+    .hamburger {
+        display: block;
+        visibility: visible;
+        font-size: 32px;
+        color: var(--color-text);
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        line-height: 1;
+    }
+}
+
+/* ============================================================
+   BREAKPOINT EXTRA: Moviles muy estrechos (<= 400 px)
+   Solo en pantallas muy pequeñas (iPhone SE, Galaxy S8+, Z Fold 5)
+   reducimos los tamaños del header para que quepa todo.
+   En moviles modernos (>= 401 px) los iconos se ven a su tamaño
+   normal del @media (max-width: 768px).
+   ============================================================ */
+@media (max-width: 400px) {
+    .logo {
+        width: 70px;
+        height: 70px;
+    }
+
+    .header-actions {
+        gap: 0.3rem !important;
+    }
+
+    .header-actions .icono {
+        font-size: 1.2rem;
+    }
+
+    .icon-header {
+        width: 22px;
+        height: 22px;
+        min-width: 28px;
+    }
+
+    #toggle-theme {
+        font-size: 1.2rem;
+    }
+
+    .hamburger {
+        font-size: 28px !important;
+    }
+
+    header {
+        padding: 0.4rem 0.5rem !important;
     }
 }
